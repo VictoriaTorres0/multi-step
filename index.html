@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./Css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/ae53e895db.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <form onsubmit="(e) => enviarFormulario(e)" id="formulario">
+      <div class="formularioulario" id="formulario1">
+        <h1>Register</h1>
+        <div class="campo-formularioulario">
+          <div class="campo">
+            <label class="label-texto" for="nombre">Name</label>
+            <input
+              class="input"
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="enter your name"
+              required
+            />
+            <i
+              class="formulario__validacion-estado fa-solid fa-circle-xmark"
+            ></i>
+          </div>
+
+          <div class="campo">
+            <label class="label-texto" for="email">Email</label>
+            <input
+              class="input"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="example@gmail.com"
+              required
+            />
+            <i
+              class="formulario__validacion-estado fa-solid fa-circle-xmark"
+            ></i>
+          </div>
+        </div>
+
+        <div class="contenedor-boton">
+          <div class="formulario__mensaje" id="formulario__mensaje">
+            <button type="button" class="boton" onclick="mostrarSegundaVista()">
+              Continue
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="formularioulario" id="formulario2" style="display: none">
+        <h1>Which topics you are interested in?</h1>
+        <div class="campo-formularioulario">
+          <div class="menu">
+            <a class="button" onclick="addSelectClass(this)"
+              >Software Development</a
+            >
+            <a class="button" onclick="addSelectClass(this)">Graphic Design</a>
+            <a class="button" onclick="addSelectClass(this)">User Experience</a>
+          </div>
+        </div>
+        <div class="contenedor-boton">
+          <button type="button" onclick="mostrarTerceraVista()" class="boton">
+            Continue
+          </button>
+        </div>
+      </div>
+      <div
+        class="formularioulario"
+        id="formulario-vista-3"
+        style="display: none"
+      >
+        <h1 class="h1-resumen">Summary</h1>
+        <div class="campo-intereses">
+          <label class="label-texto" for="nombre">Name:</label>
+          <p id="resultado-nombre"></p>
+        </div>
+        <div class="campo-intereses">
+          <label class="label-texto" for="email">Email:</label>
+          <p id="resultado-email"></p>
+        </div>
+        <div class="topics">
+          <label class="label-texto" for="temas">Topics:</label>
+          <ul id="temas">
+            <li>User experience</li>
+            <li>Graphic Design</li>
+          </ul>
+        </div>
+
+        <div class="contenedor-boton">
+          <button onclick="mostrarTerceraVista()" type="submit" class="boton">
+            Confirm
+          </button>
+        </div>
+      </div>
+      <div class="contenedor-boton--avanzar">
+        <button id="bolita1" class="boton-avanzar bolita-seleccionada"></button>
+        <button id="bolita2" class="boton-avanzar"></button>
+        <button id="bolita3" class="boton-avanzar"></button>
+      </div>
+    </form>
+    <script src="Js/mijs.js"></script>
+    <script
+      src="https://kit.fontawesome.com/ae53e895db.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
